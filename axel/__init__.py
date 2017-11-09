@@ -44,7 +44,7 @@ def axel(url, output_path=None, num_connections=None, headers=None,
                              use_tsocks=use_tsocks)
 
     try:
-        stdout = subprocess.check_output(arg_list, encoding='utf-8',
+        stdout = subprocess.check_output(arg_list,
                                          stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as e:
         raise AxelError(e.stderr)
