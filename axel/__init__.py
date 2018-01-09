@@ -47,7 +47,7 @@ def axel(url, output_path=None, num_connections=None, headers=None,
         stdout = subprocess.check_output(arg_list,
                                          stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as e:
-        raise AxelError(e.stderr)
+        raise AxelError(e.output)
 
     path = None
     for line in stdout.split('\n'):
